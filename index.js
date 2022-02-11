@@ -8,7 +8,8 @@ app.use(express.urlencoded());
 app.use(cors());
 
 mongoose.connect(
-  "mongodb://localhost:27017/myPhystechDB",
+//   "mongodb://localhost:27017/myPhystechDB",
+"mongodb+srv://vikasnegi:1234@cluster0.4rans.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -17,6 +18,8 @@ mongoose.connect(
     console.log("DB connected");
   }
 );
+
+
 
 const userSchema = new mongoose.Schema({
   name: String,
